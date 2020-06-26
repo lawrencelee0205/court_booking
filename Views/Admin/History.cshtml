@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Court_booking.ViewModel.BookingView>
+@{
+    ViewData["Title"] = "History";
+    Layout = "_Layout";
+}
+
+<h2>History</h2>
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date Time</th>
+                <th>Court</th>
+                <th>Customer</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var b in Model)
+            {
+            <tr>
+                <td>
+                    @b.booking.Book_time
+                </td>
+                <td>
+                    @b.court_type
+                </td>
+                <td>
+                    @b.people.Name
+                </td>
+                <td>
+                    <a asp-action="DeleteHistory" asp-route-id="@b.booking.Id">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+

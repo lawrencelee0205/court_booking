@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Court_booking.Models.Court>
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "AddBooking";
+    Layout = "_Layout";
+    int? User_id = Context.Session.GetInt32("Session_Id");
+}
+
+<h2>AddBooking</h2>
+<form action="Add">
+    <label>Date</label>
+    <input id="book_date_time" name="book_date_time" type="datetime-local" />
+
+    <input id="user_id" name="user_id" type="hidden" value="@User_id" />
+
+    <select id="court_type" name="court_type">
+        <option value="" disabled selected>Select your option</option>
+        @foreach (var c in Model)
+        {
+            <option value="@c.Id">@c.Type</option>
+        }
+        
+    </select>
+    <input type="submit" value="Submit" />
+</form>
+<a asp-action="Booking">Back</a>
+

@@ -1,0 +1,17 @@
+﻿@model Court_booking.Models.People
+@{
+    ViewData["Title"] = "DeleteCustomer";
+}
+
+<h2>Delete customer confirmation</h2>
+<br />
+<br />
+
+<div class="myview">
+    <p>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: @Model.Name</p>
+    <p>Contact &nbsp;: @Model.Contact</p>
+    <p>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: @Model.Email</p>
+    <br />
+    <a asp-action="DeleteCus" asp-route-id="@Model.Id"><input type="button" class="btn btn-danger" value="Confirm" asp-action="DeleteCus" /></a>
+    <a asp-action="Customer" ><input type="button" class="btn btn-primary" value="Back" asp-action="Customer" /></a>
+</div>

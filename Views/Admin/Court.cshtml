@@ -4,28 +4,30 @@
 }
 
 <h2>Court</h2>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Type</th>
-            <th>Status</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-
-        @foreach (var c in Model)
-        {
+<br />
+<div class="myview">
+    <table class="table">
+        <thead>
             <tr>
-                <td>@Html.DisplayFor(item => c.Id)</td>
-                <td>@Html.DisplayFor(item => c.Type)</td>
-                <td>@Html.DisplayFor(item => c.Status)</td>
-                <td>
-                    <a asp-action="ChangeStatus" asp-route-id="@c.Id">Change Status</a>
-                </td>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(item => c.Id)</td>
+                    <td>@Html.DisplayFor(item => c.Type)</td>
+                    <td>@Html.DisplayFor(item => c.Status)</td>
+                    <td>
+                        <a asp-action="ChangeStatus" asp-route-id="@c.Id">Change Status</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

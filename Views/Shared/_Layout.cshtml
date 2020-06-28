@@ -7,55 +7,56 @@
     <title>@ViewData["Title"] - Court Booking</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Customer.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-inverse border-bottom box-shadow mb-5" style="background-color:dimgrey;">
             <div class="container">
-                <p class="navbar-brand">Court Booking</p>
+                <h2 class="navbar-brand text-white">Court Booking</h2>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="color:white;">
                     @{
                         var role = Context.Session.GetString("Session_Role");
                         switch (role)
                         {
                             case "ADMIN":
-                                        <ul class="navbar-nav flex-grow-1">
-                                            <li class="nav-item">
-                                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Profile</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Customer">Customer</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Booking">Booking</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="History">History</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Court">Court</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
-                                            </li>
-                                        </ul>
+                                <ul class="navbar-nav flex-grow-1">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Customer">Customer</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Booking">Booking</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="History">History</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Court">Court</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
+                                    </li>
+                                </ul>
                                 <h3>Admin</h3>
                                 break;
 
                             case "CUSTOMER":
-                                <ul class="navbar-nav flex-grow-1">
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Profile</a>
+                                <ul class="navbar-nav flex-grow-1" style="color:white;">
+                                    <li class="nav-item" style="color: white;">
+                                        <a class="nav-link text-light"  asp-area="" asp-controller="Customer" asp-action="Index">Profile</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Booking">Booking</a>
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Customer" asp-action="Booking">Booking</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
                                     </li>
                                 </ul>
                                 <h3>Customer</h3>

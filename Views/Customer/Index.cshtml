@@ -3,8 +3,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-<p>@Model.Name</p>
-<p>@Model.Contact</p>
-<p>@Model.Email</p>
-<a asp-action="Update_profile">Update Profile</a>
+
+<h2>Profile</h2>
+<br />
+<div class="myview">
+    <p>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: @Model.Name</p>
+    <p>Contact &nbsp;: @Model.Contact</p>
+    <p>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: @Model.Email</p>
+    <br />
+    <a asp-action="Update_profile">Update Profile</a>
+</div>

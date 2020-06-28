@@ -3,7 +3,14 @@
     ViewData["Title"] = "Profile";
 }
 
-<h1>Profile</h1>
+<h2>Profile</h2>
+<br />
+<br />
 
-<p>@Model.Name</p>
-<p>@Model.Contact</p>
+<div class="myview">
+    <p>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: @Model.Name</p>
+    <p>Contact &nbsp;: @Model.Contact</p>
+    <p>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: @Model.Email</p>
+    <br />
+    <a asp-action="Update_profile">Update Profile</a>
+</div>

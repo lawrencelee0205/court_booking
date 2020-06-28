@@ -1,0 +1,35 @@
+﻿@model Court_booking.Models.Booking
+@{
+    ViewData["Title"] = "EditBooking";
+  
+}
+
+<h2>Edit Booking</h2>
+
+
+<br />
+<div class="myview">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div class="form-group">
+                    <label class="control-label">Date</label>
+                    <input id="book_date_time" value="@Model.Book_time.ToString("yyyy-MM-ddThh:mm")" name="book_date_time" class="form-control" type="datetime-local" />
+                </div>
+                <input id="user_id" name="booking_id" type="hidden" value="@Model.Id" />
+                <div class="form-group ">
+                    <label class="control-label">Court type</label>
+                    <select id="court_type" name="court_type" class="form-control" >
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="1">futsal</option>
+                        <option value="2">badminton</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                    <a asp-action="Booking"><input type="button" class="btn btn-danger" value="Cancel" /></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

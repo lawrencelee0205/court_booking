@@ -52,14 +52,14 @@ namespace Court_booking.Controllers
                 }
                 else
                 {
-                    Response.WriteAsync("<script>alert('Password not confirmed')</script>");
+                    Response.WriteAsync("<script>alert('Password not confirmed');window.location.href = 'Register';</script>");
                     return RedirectToAction(nameof(Index));
                 }
 
             }
             else
             {
-                Response.WriteAsync("<script>alert('Duplicate customer name found')</script>");
+                Response.WriteAsync("<script>alert('Duplicate customer name found'); window.location.href = 'Register';</script>");
                 return RedirectToAction(nameof(Index));
             }
 
@@ -85,7 +85,7 @@ namespace Court_booking.Controllers
 
             if (people == null)
             {
-                await Response.WriteAsync("<script>alert('Invalid user or password')</script>");
+                await Response.WriteAsync("<script>alert('Invalid user or password'); window.location.href = 'Index';</script>");
                 return View("Index");
             }
 

@@ -152,3 +152,7 @@ C:\Users\lawre\Desktop\Assignment\AppDev\Court_booking\obj\Debug\netcoreapp3.1\R
 C:\Users\lawre\Desktop\Assignment\AppDev\Court_booking\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Court.cshtml.g.cs
 C:\Users\lawre\Desktop\Assignment\AppDev\Court_booking\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ChangeStatus.cshtml.g.cs
 C:\Users\lawre\Desktop\Assignment\AppDev\Court_booking\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Update_profile.cshtml.g.cs
+C:\Users\lawre\Desktop\Assignment\AppDev\Court_booking\obj\Debug\netcoreapp3.1\Razor\Views\Customer\EditBooking.cshtml.g.cs
+C:\Users\lawre\Desktop\Assignment\AppDev\Court_booking\obj\Debug\netcoreapp3.1\Razor\Views\Admin\EditCus.cshtml.g.cs
+C:\Users\lawre\Desktop\Assignment\AppDev\Court_booking\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Update_profile.cshtml.g.cs
+C:\Users\lawre\Desktop\Assignment\AppDev\Court_booking\obj\Debug\netcoreapp3.1\Razor\Views\Admin\DeleteCustomer.cshtml.g.cs

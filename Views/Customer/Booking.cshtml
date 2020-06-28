@@ -4,41 +4,41 @@
 }
 
 <h2>Booking</h2>
-@if (Model != null)
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date Time</th>
-                <th>Court</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach (var b in Model)
-            {
+<br />
+<div class="myview">
+    @if (Model != null)
+    {
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>
-                        @b.booking.Book_time
-                    </td>
-                    <td>
-                        @b.court_type
-                    </td>
-                    <td>
-                        <a asp-action="DeleteBooking" asp-route-id="@b.booking.Id">Delete</a>
-                    </td>
+                    <th>Date Time</th>
+                    <th>Court</th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
-@ViewBag.MaxMessage
-<br />
-@ViewBag.OverlapMessage
-<br />
-<a asp-action="AddBooking">Add</a>
+            </thead>
+            <tbody>
 
+                @foreach (var b in Model)
+                {
+                    <tr>
+                        <td>
+                            @b.booking.Book_time
+                        </td>
+                        <td>
+                            @b.court_type
+                        </td>
+                        <td>
+                            <a asp-action="DeleteBooking" asp-route-id="@b.booking.Id">Delete</a> |
+                            <a asp-action="EditBooking" asp-route-id="@b.booking.Id">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    @ViewBag.Message
+    <br />
+    <br />
+    <a asp-action="AddBooking">Add</a>
 
-
-
+</div>

@@ -5,11 +5,13 @@
     Layout = "_Layout";
 }
 <h2>Customer Table</h2>
+<br />
+<div class="myview">
 <table class="table">
     <thead>
         <tr>
             <th>Id</th>
-            <th>Name</th>            
+            <th>Name</th>
             <th>Tel No</th>
             <th>Email</th>
             <th></th>
@@ -21,15 +23,15 @@
         {
             <tr>
                 <td>@cus.Id</td>
-                <td>@cus.Name</td>                
+                <td>@cus.Name</td>
                 <td>@cus.Contact</td>
                 <td>@cus.Email</td>
                 <td>
-                    <a >Edit</a> |
-                    <a >Details</a> |
-                    <a asp-action="DeleteCus" asp-route-id="@cus.Id" >Delete</a>
+                    <a asp-action="EditCus" asp-route-id="@cus.Id">Edit</a> |                    
+                    <a asp-action="DeleteCustomer" asp-route-id="@cus.Id">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+</div>
